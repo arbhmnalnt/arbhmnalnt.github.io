@@ -1,107 +1,82 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Arial', sans-serif;
-  direction: rtl;
-  background-color: #f9f9f9;
-  color: #333;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
 header {
-  background-color: #6c757d;
-  padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
 }
 
-header nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
+nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-header nav ul li {
-  margin: 0 15px;
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
 
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+h1, h2 {
+    text-align: center;
 }
 
 section {
-  padding: 50px 20px;
+    padding: 20px;
 }
 
-#home {
-  background-color: #007bff;
-  color: white;
-  padding: 100px 20px;
+.product {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    margin: 10px;
+    width: 400px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
 }
 
-.hero-image {
-  width: 100%;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 10px;
+.product img {
+    width: 100%; /* Make the image fill the card width */
+    height: 120px; /* Fixed height for the image */
+    object-fit: cover; /* Maintain aspect ratio while covering */
 }
 
-#about .about-image {
-  width: 80%;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 10px;
+.product h3 {
+    margin: 10px 0;
 }
 
-#products .product {
-  display: inline-block;
-  margin: 20px;
-  padding: 20px;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  width: 300px;
-  text-align: center;
+.product p {
+    padding: 0 10px;
 }
 
-#products .product img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+.product button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
-#offers .offer-image {
-  width: 50%;
-  height: auto;
-  margin-top: 20px;
-  border-radius: 10px;
+.product button:hover {
+    background-color: #45a049;
 }
 
-button {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-button:hover {
-  background-color: #218838;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-}
-
-footer p {
-  margin: 5px 0;
+#products {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to multiple rows */
+    justify-content: center; /* Center align the cards */
 }
