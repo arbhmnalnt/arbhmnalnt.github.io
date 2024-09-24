@@ -5,73 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="صفحة لعرض المشغولات والمنسوجات اليدوية">
     <title>مشغولات ومنسوجات يدوية</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <header>
+    <header class="bg-success text-white text-center py-3">
         <nav>
-            <ul>
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#about">معلومات عنا</a></li>
-                <li><a href="#products">المنتجات</a></li>
-                <li><a href="#offers">العروض</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link text-white" href="#home">الرئيسية</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#about">معلومات عنا</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#products">المنتجات</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#offers">العروض</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">تواصل معنا</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- قسم الصفحة الرئيسية -->
-    <section id="home">
+    <section id="home" class="text-center py-5">
         <h1>مرحبًا بك في موقع المشغولات اليدوية</h1>
         <p>استكشف مجموعة مميزة من المنتجات اليدوية المصنوعة بأيدي محترفة.</p>
-        <img src="https://images.unsplash.com/photo-1635656797814-2493a866105f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhbmRtYWRlfGVufDB8fDB8fHww" alt="مشغولات يدوية" class="hero-image">
+        <img src="https://images.unsplash.com/photo-1635656797814-2493a866105f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhbmRtYWRlfGVufDB8fDB8fHww" alt="مشغولات يدوية" class="img-fluid">
     </section>
 
     <!-- قسم "معلومات عنا" -->
-    <section id="about">
+    <section id="about" class="py-5 text-center">
         <h2>معلومات عنا</h2>
         <p>نحن فريق متخصص في صناعة المشغولات اليدوية. نهدف إلى تقديم أفضل وأرقى المنتجات اليدوية لعملائنا حول العالم.</p>
-        <p>كل منتج لدينا يعكس التراث والجودة العالية. نسعى دائمًا لتقديم تصاميم عصرية بأيدي محلية.</p>
-        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="صورة ورشة العمل" class="about-image">
+        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="صورة ورشة العمل" class="img-fluid">
     </section>
 
     <!-- قسم المنتجات -->
-    <section id="products">
-        <h2>المنتجات</h2>
-        <div class="product">
-            <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="سجادة يدوية">
-            <h3>سجادة يدوية</h3>
-            <p>سجادة مصنوعة يدويًا بتصميم فريد يعكس التراث الشرقي.</p>
-            <button onclick="window.location.href='order.html'">اطلب الآن</button>
-        </div>
-        <div class="product">
-            <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="حقيبة يدوية">
-            <h3>حقيبة يدوية</h3>
-            <p>حقيبة يدوية مصنوعة من خامات طبيعية بجودة عالية وتصميم أنيق.</p>
-            <button onclick="window.location.href='order.html'">اطلب الآن</button>
-        </div>
-        <div class="product">
-            <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="قطعة ديكور خشبية">
-            <h3>قطعة ديكور خشبية</h3>
-            <p>قطعة فنية ديكورية مصنوعة من الخشب الطبيعي بأيدي ماهرة.</p>
-            <button onclick="window.location.href='order.html'">اطلب الآن</button>
+    <section id="products" class="py-5">
+        <h2 class="text-center">المنتجات</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="سجادة يدوية">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">سجادة يدوية</h3>
+                            <p class="card-text">سجادة مصنوعة يدويًا بتصميم فريد يعكس التراث الشرقي.</p>
+                            <button class="btn btn-success" onclick="window.location.href='order.html'">اطلب الآن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="حقيبة يدوية">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">حقيبة يدوية</h3>
+                            <p class="card-text">حقيبة يدوية مصنوعة من خامات طبيعية بجودة عالية وتصميم أنيق.</p>
+                            <button class="btn btn-success" onclick="window.location.href='order.html'">اطلب الآن</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="قطعة ديكور خشبية">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">قطعة ديكور خشبية</h3>
+                            <p class="card-text">قطعة فنية ديكورية مصنوعة من الخشب الطبيعي بأيدي ماهرة.</p>
+                            <button class="btn btn-success" onclick="window.location.href='order.html'">اطلب الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- قسم العروض -->
-    <section id="offers">
+    <section id="offers" class="py-5 text-center">
         <h2>العروض</h2>
         <p>احصل على خصم 20% عند شراء أي 3 منتجات من تشكيلتنا الرائعة!</p>
-        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="عرض خاص" class="offer-image">
+        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="عرض خاص" class="img-fluid">
     </section>
 
     <!-- قسم التواصل -->
-    <footer id="contact">
+    <footer id="contact" class="text-center py-3">
         <h2>تواصل معنا</h2>
         <p>البريد الإلكتروني: info@example.com</p>
         <p>الهاتف: 123-456-7890</p>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
