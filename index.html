@@ -1,94 +1,126 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="صفحة لعرض المشغولات والمنسوجات اليدوية">
-    <title>مشغولات ومنسوجات يدوية</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Step By Step - ذوي الاحتياجات الخاصة</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header class="bg-success text-white text-center py-3">
-        <nav>
-            <ul class="nav justify-content-center">
-                <li class="nav-item"><a class="nav-link text-white" href="#home">الرئيسية</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#about">معلومات عنا</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#products">المنتجات</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#offers">العروض</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#contact">تواصل معنا</a></li>
-            </ul>
-        </nav>
-    </header>
+<body dir="rtl">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" alt="Step By Step" width="50" height="50">
+      Step By Step
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">الرئيسية</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">من نحن</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#services">خدماتنا</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">تواصل معنا</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- قسم الصفحة الرئيسية -->
-    <section id="home" class="text-center py-5">
-        <h1>مرحبًا بك في موقع المشغولات اليدوية</h1>
-        <p>استكشف مجموعة مميزة من المنتجات اليدوية المصنوعة بأيدي محترفة.</p>
-        <img src="https://images.unsplash.com/photo-1635656797814-2493a866105f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhhbmRtYWRlfGVufDB8fDB8fHww" alt="مشغولات يدوية" class="img-fluid">
-    </section>
+  <!-- Hero Section -->
+  <section class="hero-section text-center py-5">
+    <div class="container">
+      <h1 class="display-4">دعم ورعاية للأطفال ذوي الاحتياجات الخاصة</h1>
+      <p class="lead">نحن هنا لمساعدة الأطفال وأسرهم على تحقيق إمكانياتهم الكاملة</p>
+      <a href="#services" class="btn btn-primary btn-lg">اكتشف خدماتنا</a>
+    </div>
+  </section>
 
-    <!-- قسم "معلومات عنا" -->
-    <section id="about" class="py-5 text-center">
-        <h2>معلومات عنا</h2>
-        <p>نحن فريق متخصص في صناعة المشغولات اليدوية. نهدف إلى تقديم أفضل وأرقى المنتجات اليدوية لعملائنا حول العالم.</p>
-        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="صورة ورشة العمل" class="img-fluid">
-    </section>
-
-    <!-- قسم المنتجات -->
-    <section id="products" class="py-5">
-        <h2 class="text-center">المنتجات</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="سجادة يدوية">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">سجادة يدوية</h3>
-                            <p class="card-text">سجادة مصنوعة يدويًا بتصميم فريد يعكس التراث الشرقي.</p>
-                            <button class="btn btn-success" onclick="window.location.href='order.html'">اطلب الآن</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="حقيبة يدوية">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">حقيبة يدوية</h3>
-                            <p class="card-text">حقيبة يدوية مصنوعة من خامات طبيعية بجودة عالية وتصميم أنيق.</p>
-                            <button class="btn btn-success" onclick="window.location.href='order.html'">اطلب الآن</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" class="card-img-top" alt="قطعة ديكور خشبية">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">قطعة ديكور خشبية</h3>
-                            <p class="card-text">قطعة فنية ديكورية مصنوعة من الخشب الطبيعي بأيدي ماهرة.</p>
-                            <button class="btn btn-success" onclick="window.location.href='order.html'">اطلب الآن</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- About Us Section -->
+  <section id="about" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">قصتنا</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <p>لقد عايشنا عائلات كثيرة تعاني مع أطفالها من ذوي الاحتياجات الخاصة وذلك لعدم وجود الدعم والمساعدة لتخفيف الحمل عليهم. لذلك أسسنا مركز Step By Step لتقديم الرعاية والدعم المطلوبين.</p>
         </div>
-    </section>
+        <div class="col-md-6">
+          <img src="about-image.jpg" alt="About Step By Step" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- قسم العروض -->
-    <section id="offers" class="py-5 text-center">
-        <h2>العروض</h2>
-        <p>احصل على خصم 20% عند شراء أي 3 منتجات من تشكيلتنا الرائعة!</p>
-        <img src="https://plus.unsplash.com/premium_photo-1677700375022-8a3ac8c95d23?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aGFuZG1hZGVfdGV4dGlsZXNfYW5kX2NyYWZ0c3xlbnwwfHwwfHx8MA%3D%3D" alt="عرض خاص" class="img-fluid">
-    </section>
+  <!-- Services Section -->
+  <section id="services" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">خدماتنا</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="service-box">
+            <img src="service1.jpg" alt="Service 1" class="img-fluid mb-3">
+            <h4>العلاج الطبيعي</h4>
+            <p>نقدم جلسات علاج طبيعي للأطفال لمساعدتهم على تحسين قدراتهم الحركية.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <img src="service2.jpg" alt="Service 2" class="img-fluid mb-3">
+            <h4>العلاج النفسي</h4>
+            <p>نساعد الأطفال وأسرهم على التعامل مع التحديات النفسية التي يواجهونها.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="service-box">
+            <img src="service3.jpg" alt="Service 3" class="img-fluid mb-3">
+            <h4>الدمج التعليمي</h4>
+            <p>نوفر برامج دمج للأطفال في المدارس لتمكينهم من التعلم والنمو مع زملائهم.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- قسم التواصل -->
-    <footer id="contact" class="text-center py-3">
-        <h2>تواصل معنا</h2>
-        <p>البريد الإلكتروني: info@example.com</p>
-        <p>الهاتف: 123-456-7890</p>
-    </footer>
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">تواصل معنا</h2>
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">الاسم</label>
+            <input type="text" class="form-control" id="name" placeholder="أدخل اسمك">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" class="form-control" id="email" placeholder="أدخل بريدك الإلكتروني">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message">رسالتك</label>
+          <textarea class="form-control" id="message" rows="5" placeholder="أدخل رسالتك"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">إرسال</button>
+      </form>
+    </div>
+  </section>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Footer -->
+  <footer class="py-4 bg-dark text-white text-center">
+    <p>&copy; 2024 Step By Step. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
