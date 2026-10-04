@@ -133,7 +133,7 @@ function renderGame(){
 async function refresh(){
   if(!S.room||!S.player)return;
   try{
-    const d=await call("state",{code:S.room.code,token:S.player.player_key});
+    const d=await call("state",{code:S.room.code,player_id:S.player.id});
     S.room=d.room;S.player=d.player;S.players=d.players||[];S.question=d.question;S.meAnswer=d.mine;S.other=d.other;S.status=d.room.status;save();setNet(true,"متصل");
     if(S.status==="finished"){finishLocal();return}
     if(S.status==="lobby"){show("lobby");hide("game");renderLobby()}
@@ -156,11 +156,11 @@ $("join").onclick=async()=>{
   catch(e){msg("homeAlert",e.message)}
 };
 $("code").onkeydown=e=>{if(e.key==="Enter")$("join").click()};
-$("ready").onclick=async()=>{try{await call("ready",{code:S.room.code,token:S.player.player_key});await refresh()}catch(e){msg("lobbyAlert",e.message)}};
-$("start").onclick=async()=>{try{await call("start",{code:S.room.code,token:S.player.player_key});await refresh()}catch(e){msg("lobbyAlert",e.message)}};
-$("send").onclick=async()=>{const a=$("answer").value.trim();hide("gameAlert");if(!a)return msg("gameAlert","اكتب إجابتك الأول.");$("send").disabled=true;try{await call("answer",{code:S.room.code,token:S.player.player_key,answer:a});await refresh()}catch(e){$("send").disabled=false;msg("gameAlert",e.message)}};
-$("next").onclick=async()=>{try{await call("next",{code:S.room.code,token:S.player.player_key});await refresh()}catch(e){msg("gameAlert",e.message)}};
-$("finish").onclick=async()=>{try{await call("finish",{code:S.room.code,token:S.player.player_key})}catch{}finishLocal()};
+$("ready").onclick=async()=>{try{await call("ready",{code:S.room.code,player_id:S.player.id});await refresh()}catch(e){msg("lobbyAlert",e.message)}};
+$("start").onclick=async()=>{try{await call("start",{code:S.room.code,player_id:S.player.id});await refresh()}catch(e){msg("lobbyAlert",e.message)}};
+$("send").onclick=async()=>{const a=$("answer").value.trim();hide("gameAlert");if(!a)return msg("gameAlert","اكتب إجابتك الأول.");$("send").disabled=true;try{await call("answer",{code:S.room.code,player_id:S.player.id,answer:a});await refresh()}catch(e){$("send").disabled=false;msg("gameAlert",e.message)}};
+$("next").onclick=async()=>{try{await call("next",{code:S.room.code,player_id:S.player.id});await refresh()}catch(e){msg("gameAlert",e.message)}};
+$("finish").onclick=async()=>{try{await call("finish",{code:S.room.code,player_id:S.player.id})}catch{}finishLocal()};
 function finishLocal(){if(S.timer)clearInterval(S.timer);hide("home");hide("lobby");hide("game");show("result");$("score").textContent=S.room?.total_questions||0;$("done").textContent=S.room?.total_questions||0;$("rcode").textContent=S.room?.code||"------";$("resultText").textContent="جولة لطيفة وفتحتوا كلام جديد 😊";S.status="finished"}
 function leave(){if(S.timer)clearInterval(S.timer);clearSession();location.href=location.pathname}
 $("leaveLobby").onclick=leave;$("leaveGame").onclick=leave;$("newGame").onclick=leave;
