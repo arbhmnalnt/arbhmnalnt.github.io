@@ -134,7 +134,7 @@ async function refresh(){
   if(!S.room||!S.player)return;
   try{
     const d=await call("state",{code:S.room.code,player_id:S.player.id});
-    S.room=d.room;S.player=d.player;S.players=d.players||[];S.question=d.question;S.meAnswer=d.mine;S.other=d.other;S.status=d.room.status;save();setNet(true,"متصل");
+    S.room=d.room;S.player=d.player;S.players=d.players||[];S.question=d.question;S.meAnswer=d.mine;S.other=d.other;S.status=(d.room.status==="waiting"?"lobby":d.room.status);save();setNet(true,"متصل");
     if(S.status==="finished"){finishLocal();return}
     if(S.status==="lobby"){show("lobby");hide("game");renderLobby()}
     if(S.status==="playing"){renderGame()}
