@@ -1,1 +1,175 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#7c3aed">
+<title>بيننا سؤال 💍</title>
+<style>
+:root{--bg:#faf7ff;--card:#fff;--text:#241b35;--muted:#756b82;--p:#7c3aed;--p2:#a855f7;--soft:#f1e9ff;--border:#eadff7;--ok:#16794c;--okbg:#edf9f3;--err:#b42318;--errbg:#fff0ef}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:linear-gradient(145deg,#fff,#faf7ff 58%,#f6efff);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+.app{width:min(760px,100%);margin:auto;padding:18px 14px 42px}.top{display:flex;justify-content:space-between;align-items:center;gap:10px}.logo{font-size:20px;font-weight:950}.net{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border:1px solid var(--border);border-radius:999px;background:#fff;color:var(--muted);font-size:11px;font-weight:850}.dot{width:8px;height:8px;border-radius:50%;background:#bbb}.dot.ok{background:#22c55e}.dot.err{background:#ef4444}
+.hero{text-align:center;padding:20px 8px 17px}.ring{font-size:52px}.hero h1{font-size:37px;line-height:1.15;margin:6px 0 8px;letter-spacing:-1.2px}.hero p{margin:0 auto;max-width:560px;color:var(--muted);line-height:1.85}
+.card{background:rgba(255,255,255,.96);border:1px solid var(--border);border-radius:26px;padding:19px;box-shadow:0 14px 40px rgba(71,36,108,.08)}
+.title{font-size:14px;font-weight:950;margin:0 0 8px}
+input,textarea{width:100%;padding:13px 14px;border:1px solid var(--border);border-radius:15px;font:inherit;outline:none;background:#fff;color:var(--text)}textarea{min-height:125px;resize:vertical;line-height:1.7}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}.choice{min-height:60px;border:1px solid var(--border);background:#fff;border-radius:16px;padding:12px 8px;font:inherit;font-weight:900;cursor:pointer}.choice small{display:block;color:var(--muted);font-size:10px;margin-top:3px;font-weight:650}.choice.selected{background:var(--soft);border-color:#ad85f7;color:var(--p)}
+.actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}button{font:inherit;border:0;cursor:pointer;min-height:46px;padding:12px 14px;border-radius:15px;font-weight:950}.primary{background:linear-gradient(135deg,var(--p),var(--p2));color:#fff;box-shadow:0 8px 18px rgba(124,58,237,.18)}.secondary{background:var(--soft);color:var(--p)}.ghost{background:#f7f3fb}.danger{background:var(--errbg);color:var(--err)}button:disabled{opacity:.5;cursor:not-allowed;box-shadow:none}
+.hidden{display:none!important}.alert{padding:11px 13px;border-radius:15px;font-size:12px;line-height:1.7;font-weight:800;margin-bottom:12px}.alert.err{background:var(--errbg);color:var(--err)}.alert.ok{background:var(--okbg);color:var(--ok)}.help{text-align:center;color:var(--muted);font-size:11px;line-height:1.7;margin-top:8px}
+.head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.tag{display:inline-block;background:var(--soft);color:var(--p);border-radius:999px;padding:7px 10px;font-size:11px;font-weight:950}.code{text-align:center;font-size:34px;letter-spacing:7px;color:var(--p);font-weight:950;margin:12px 0}
+.players{display:grid;gap:8px;margin:14px 0}.player{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px;background:#fbf9fd;border:1px solid var(--border);border-radius:17px}.pn{font-weight:900}.badge{font-size:10px;background:var(--soft);color:var(--p);padding:6px 8px;border-radius:999px;font-weight:900}
+.wait{padding:12px;background:#fffaf0;border:1px solid #f2dfb9;color:#765c22;border-radius:16px;font-size:12px;line-height:1.7}.bar{height:8px;background:#eee7f5;border-radius:99px;overflow:hidden;margin:12px 0 18px}.bar>div{height:100%;width:0;background:linear-gradient(90deg,var(--p),var(--p2));transition:.3s}
+.qmeta{display:flex;gap:8px;flex-wrap:wrap}.question{font-size:27px;line-height:1.65;font-weight:950;text-align:center;margin:20px 0}
+.reveal{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:13px}.revealcard{border:1px solid var(--border);border-radius:18px;padding:14px;background:#fff}.rt{font-size:11px;color:var(--muted);font-weight:900;margin-bottom:7px}.ra{font-size:15px;line-height:1.75;white-space:pre-wrap;overflow-wrap:anywhere}
+.result{text-align:center}.big{font-size:42px}.score{font-size:50px;color:var(--p);font-weight:950}.stats{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:15px 0}.stat{padding:13px;background:#fbf9fd;border:1px solid var(--border);border-radius:16px}.stat b{display:block;color:var(--p);font-size:22px}.stat span{font-size:10px;color:var(--muted);font-weight:800}
+@media(max-width:560px){.choices,.actions,.reveal{grid-template-columns:1fr}.hero h1{font-size:32px}.question{font-size:23px}.card{padding:16px}.code{font-size:29px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top"><div class="logo">بيننا سؤال 💍</div><div id="net" class="net"><i class="dot"></i><span>جاهز</span></div></div>
 
+  <main id="home">
+    <div class="hero"><div class="ring">💍</div><h1>بيننا سؤال</h1><p>كل واحد من موبايله… وفي نفس اللعبة. جاوبوا على راحتكم، ولما الاتنين يخلصوا تظهر الإجابات مع بعض. 👀</p></div>
+    <div class="card">
+      <div id="homeAlert" class="alert err hidden"></div>
+      <div class="title">اسمك في اللعبة</div><input id="name" maxlength="30" placeholder="مثال: أحمد">
+      <div style="height:14px"></div>
+      <div class="title">نوع الجولة</div>
+      <div id="cats" class="choices">
+        <button type="button" class="choice selected" data-cat="all">🎲 عشوائي<small>من كل المواضيع</small></button>
+        <button type="button" class="choice" data-cat="fun">😂 ممتع<small>خفيف ولطيف</small></button>
+        <button type="button" class="choice" data-cat="feelings">❤️ مشاعر<small>نعرف بعض أكتر</small></button>
+        <button type="button" class="choice" data-cat="life">🏠 الحياة<small>الجواز والمسؤوليات</small></button>
+        <button type="button" class="choice" data-cat="money">💰 فلوس وشغل<small>وضوح وراحة</small></button>
+        <button type="button" class="choice" data-cat="family">👨‍👩‍👧 الأهل والأطفال<small>المستقبل والتربية</small></button>
+      </div>
+      <div style="height:14px"></div>
+      <div class="title">عدد الأسئلة</div>
+      <div id="lens" class="choices">
+        <button type="button" class="choice selected" data-len="10">10<small>جولة سريعة</small></button>
+        <button type="button" class="choice" data-len="15">15<small>جولة متوسطة</small></button>
+        <button type="button" class="choice" data-len="20">20<small>جولة طويلة</small></button>
+        <button type="button" class="choice" data-len="30">30<small>للكلام الكتير 😄</small></button>
+      </div>
+      <div class="actions"><button id="create" class="primary">إنشاء لعبة 💜</button><button id="openJoin" class="secondary">دخول بكود 🔑</button></div>
+      <div id="joinBox" class="hidden" style="margin-top:12px"><div class="title">كود الغرفة</div><input id="code" maxlength="6" inputmode="latin" placeholder="A7K9Q2"><button id="join" class="primary" style="margin-top:10px">انضم للعبة</button></div>
+      <div class="help">الواجهة مستقلة، والاتصال يتم بخادم اللعبة. لا تحتاج تسجيل دخول.</div>
+    </div>
+  </main>
+
+  <section id="lobby" class="hidden"><div class="card">
+    <div class="head"><button id="leaveLobby" class="ghost">← خروج</button><span class="tag">غرفة خاصة</span></div>
+    <div class="help">ابعت الكود للطرف الثاني</div><div id="roomCode" class="code">------</div>
+    <div class="actions"><button id="share" class="secondary">📤 مشاركة</button><button id="copy" class="ghost">🔗 نسخ الرابط</button></div>
+    <div id="lobbyAlert" class="alert err hidden" style="margin-top:12px"></div>
+    <div class="title">اللاعبين</div><div id="players" class="players"></div>
+    <div id="wait" class="wait">في انتظار الطرف الثاني يدخل…</div>
+    <button id="ready" class="primary" style="width:100%;margin-top:10px" disabled>أنا جاهز ✅</button>
+    <button id="start" class="primary hidden" style="width:100%;margin-top:10px">ابدأ الجولة 🚀</button>
+    <div class="help">صاحب الغرفة يبدأ بعد ما الاتنين يبقوا جاهزين.</div>
+  </div></section>
+
+  <section id="game" class="hidden"><div class="card">
+    <div class="head"><button id="leaveGame" class="ghost">← خروج</button><span id="round" class="tag">الجولة</span></div>
+    <div class="bar"><div id="bar"></div></div>
+    <div class="qmeta"><span id="catTag" class="tag"></span><span id="qnum" class="tag"></span></div>
+    <div id="question" class="question"></div><div id="gameAlert" class="alert err hidden"></div>
+    <div id="write"><textarea id="answer" maxlength="3000" placeholder="اكتب إجابتك براحتك..."></textarea><div class="help">إجابتك تفضل مخفية لحد ما الطرف الثاني يجاوب.</div><button id="send" class="primary" style="width:100%;margin-top:10px">إرسال الإجابة ❤️</button></div>
+    <div id="waiting" class="hidden"><div class="wait" style="text-align:center">✅ إجابتك اتبعت<br>مستني الطرف الثاني…</div></div>
+    <div id="revealBox" class="hidden"><div class="alert ok" style="text-align:center">🎉 الاتنين جاوبوا — شوفوا الإجابتين!</div><div id="reveal" class="reveal"></div><button id="next" class="primary" style="width:100%;margin-top:10px">السؤال التالي →</button></div>
+    <button id="finish" class="danger" style="width:100%;margin-top:10px">إنهاء الجولة</button>
+  </div></section>
+
+  <section id="result" class="hidden"><div class="card result"><div class="big">🎉</div><h2>جولة جميلة!</h2><div id="score" class="score">0</div><p id="resultText">فتحتوا كلام جديد 😊</p><div class="stats"><div class="stat"><b id="done">0</b><span>سؤال</span></div><div class="stat"><b id="rcode">------</b><span>كود الغرفة</span></div></div><button id="newGame" class="primary" style="width:100%">جولة جديدة ✨</button></div></section>
+</div>
+
+<script>
+const API="https://bggmjaealbuxgnrxgfeu.supabase.co/functions/v1/bayna-soal";
+const S={room:null,player:null,name:"",status:"home",timer:null,players:[],question:null,meAnswer:null,other:null,category:"all",length:10};
+const $=id=>document.getElementById(id);
+const show=id=>$(id).classList.remove("hidden"),hide=id=>$(id).classList.add("hidden");
+const msg=(id,t,ok=false)=>{$(id).textContent=t;$(id).className="alert "+(ok?"ok":"err");show(id)};
+const setNet=(ok,t)=>{$("net").querySelector(".dot").className="dot "+(ok?"ok":"err");$("net").querySelector("span").textContent=t};
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+async function call(action,params){
+  const u=new URL(API);u.searchParams.set("api",action);
+  Object.entries(params||{}).forEach(([k,v])=>u.searchParams.set(k,String(v)));
+  const r=await fetch(u.toString(),{cache:"no-store"});
+  let d=null;try{d=await r.json()}catch{}
+  if(!r.ok||d?.error)throw new Error(d?.error||("HTTP "+r.status));
+  return d;
+}
+function save(){sessionStorage.setItem("bayna",JSON.stringify({room:S.room,player:S.player,name:S.name,status:S.status,category:S.category,length:S.length}))}
+function restore(){try{const x=JSON.parse(sessionStorage.getItem("bayna")||"null");if(!x)return false;Object.assign(S,x);return !!S.room&&!!S.player}catch{return false}}
+function clearSession(){sessionStorage.removeItem("bayna")}
+function catTitle(c){return {all:"عشوائي",fun:"ممتع",feelings:"مشاعر",life:"الحياة",money:"فلوس وشغل",family:"الأهل والأطفال"}[c]||"جولة"}
+function renderLobby(){
+  if(S.status!=="lobby")return;
+  $("roomCode").textContent=S.room.code;
+  $("players").innerHTML=S.players.map(p=>'<div class="player"><div><div class="pn">'+esc(p.name)+(p.id===S.player.id?' <span style="color:var(--p)">(أنت)</span>':'')+'</div><div style="font-size:10px;color:var(--muted);margin-top:3px">'+(p.ready?'جاهز ✅':'لسه ما جهزش')+'</div></div><span class="badge">'+(p.is_host?'صاحب الغرفة':'ضيف')+'</span></div>').join("");
+  const me=S.players.find(p=>p.id===S.player.id),all=S.players.length===2&&S.players.every(p=>p.ready);
+  $("wait").textContent=S.players.length<2?"في انتظار الطرف الثاني يدخل…":"الاتنين دخلوا. كل واحد يدوس «أنا جاهز».";
+  $("ready").disabled=S.players.length<2||!!me?.ready;$("ready").textContent=me?.ready?"أنت جاهز ✅":"أنا جاهز ✅";
+  if(S.player.is_host&&all)show("start");else hide("start");
+}
+function renderGame(){
+  if(S.status!=="playing"||!S.question)return;
+  hide("lobby");show("game");
+  $("round").textContent="جولة "+catTitle(S.room.category);
+  $("catTag").textContent=S.question.category;
+  $("qnum").textContent=S.question.number+" من "+S.question.total;
+  $("bar").style.width=(S.question.number/S.question.total*100)+"%";
+  $("question").textContent=S.question.text;
+  const mine=S.meAnswer,other=S.other;
+  if(mine&&other&&other.ready&&other.answer!==null){
+    hide("write");hide("waiting");show("revealBox");
+    $("reveal").innerHTML='<div class="revealcard"><div class="rt">'+esc(S.name)+' ❤️</div><div class="ra">'+esc(mine.answer||"—")+'</div></div><div class="revealcard"><div class="rt">'+esc(other.name)+' ❤️</div><div class="ra">'+esc(other.answer||"—")+'</div></div>';
+    $("next").disabled=!S.player.is_host;
+    $("next").textContent=S.question.number>=S.question.total?"إنهاء الجولة 🎉":"السؤال التالي →";
+  }else if(mine){hide("write");show("waiting");hide("revealBox")}
+  else{show("write");hide("waiting");hide("revealBox");$("send").disabled=false}
+}
+async function refresh(){
+  if(!S.room||!S.player)return;
+  try{
+    const d=await call("state",{code:S.room.code,token:S.player.player_key});
+    S.room=d.room;S.player=d.player;S.players=d.players||[];S.question=d.question;S.meAnswer=d.mine;S.other=d.other;S.status=d.room.status;save();setNet(true,"متصل");
+    if(S.status==="finished"){finishLocal();return}
+    if(S.status==="lobby"){show("lobby");hide("game");renderLobby()}
+    if(S.status==="playing"){renderGame()}
+  }catch{setNet(false,"إعادة الاتصال...")}
+}
+function startPolling(){if(S.timer)clearInterval(S.timer);refresh();S.timer=setInterval(refresh,1500)}
+$("openJoin").onclick=()=>{show("joinBox");$("code").focus()};
+document.querySelectorAll("#cats .choice").forEach(b=>b.onclick=()=>{document.querySelectorAll("#cats .choice").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");S.category=b.dataset.cat});
+document.querySelectorAll("#lens .choice").forEach(b=>b.onclick=()=>{document.querySelectorAll("#lens .choice").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");S.length=Number(b.dataset.len)});
+$("create").onclick=async()=>{
+  S.name=$("name").value.trim();hide("homeAlert");if(!S.name)return msg("homeAlert","اكتب اسمك الأول.");
+  try{const d=await call("create",{name:S.name,category:S.category,length:S.length});S.room=d.room;S.player=d.player;S.status="lobby";hide("home");show("lobby");save();startPolling()}
+  catch(e){msg("homeAlert",e.message)}
+};
+$("join").onclick=async()=>{
+  S.name=$("name").value.trim();const code=$("code").value.trim().toUpperCase().replace(/[^A-Z0-9]/g,"");hide("homeAlert");
+  if(!S.name)return msg("homeAlert","اكتب اسمك الأول.");if(code.length!==6)return msg("homeAlert","الكود لازم يكون 6 حروف أو أرقام.");
+  try{const d=await call("join",{name:S.name,code});S.room=d.room;S.player=d.player;S.status=d.room.status;hide("home");show(S.status==="playing"?"game":"lobby");save();startPolling()}
+  catch(e){msg("homeAlert",e.message)}
+};
+$("code").onkeydown=e=>{if(e.key==="Enter")$("join").click()};
+$("ready").onclick=async()=>{try{await call("ready",{code:S.room.code,token:S.player.player_key});await refresh()}catch(e){msg("lobbyAlert",e.message)}};
+$("start").onclick=async()=>{try{await call("start",{code:S.room.code,token:S.player.player_key});await refresh()}catch(e){msg("lobbyAlert",e.message)}};
+$("send").onclick=async()=>{const a=$("answer").value.trim();hide("gameAlert");if(!a)return msg("gameAlert","اكتب إجابتك الأول.");$("send").disabled=true;try{await call("answer",{code:S.room.code,token:S.player.player_key,answer:a});await refresh()}catch(e){$("send").disabled=false;msg("gameAlert",e.message)}};
+$("next").onclick=async()=>{try{await call("next",{code:S.room.code,token:S.player.player_key});await refresh()}catch(e){msg("gameAlert",e.message)}};
+$("finish").onclick=async()=>{try{await call("finish",{code:S.room.code,token:S.player.player_key})}catch{}finishLocal()};
+function finishLocal(){if(S.timer)clearInterval(S.timer);hide("home");hide("lobby");hide("game");show("result");$("score").textContent=S.room?.total_questions||0;$("done").textContent=S.room?.total_questions||0;$("rcode").textContent=S.room?.code||"------";$("resultText").textContent="جولة لطيفة وفتحتوا كلام جديد 😊";S.status="finished"}
+function leave(){if(S.timer)clearInterval(S.timer);clearSession();location.href=location.pathname}
+$("leaveLobby").onclick=leave;$("leaveGame").onclick=leave;$("newGame").onclick=leave;
+function roomLink(){return location.origin+location.pathname+"?room="+encodeURIComponent(S.room.code)}
+$("copy").onclick=async()=>{try{await navigator.clipboard.writeText(roomLink());msg("lobbyAlert","تم نسخ الرابط ❤️",true)}catch{prompt("انسخ الرابط:",roomLink())}};
+$("share").onclick=async()=>{const u=roomLink();if(navigator.share){try{await navigator.share({title:"بيننا سؤال 💍",text:"انضم للعبة بكود "+S.room.code,url:u});return}catch{}}$("copy").click()};
+const initial=new URLSearchParams(location.search).get("room");if(initial){show("joinBox");$("code").value=initial.toUpperCase()}
+if(restore()){hide("home");show(S.status==="playing"?"game":"lobby");startPolling()}
+setNet(true,"جاهز");
+</script>
+</body>
+</html>
